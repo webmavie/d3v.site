@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>d3v.site - Free Online Color Picker (Eyedropper Tool)</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <meta name="description" content="d3v.site is a free, real-time online color picker and eyedropper tool. Instantly grab any color from your screen. Get codes in HEX, RGB, HSL, and CMYK. No download, no installation.">
+    <meta name="keywords" content="d3v.site, color picker, online color picker, eyedropper, free color picker, screen color picker, hex color code, rgb color, developer tool, web design tool, no download color picker">
+    <link rel="canonical" href="https://d3v.site/">
+    
+    <meta property="og:title" content="d3v.site - Instant Online Color Picker Tool">
+    <meta property="og:description" content="Use the eyedropper to pick any color from your screen. Instantly get HEX, RGB, HSL, and CMYK color codes. Free, online, no download required.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://d3v.site/">
+    <meta property="og:image" content="https://d3v.site/images/favicon.png">
+    <meta property="og:site_name" content="d3v.site">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "d3v.site - Online Color Picker",
+      "operatingSystem": "All",
+      "applicationCategory": "DeveloperApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "A free, real-time online color picker and eyedropper tool that allows users to grab any color from their screen and get its code in HEX, RGB, HSL, and CMYK formats without any downloads.",
+      "url": "https://d3v.site/",
+      "author": {
+        "@type": "Organization",
+        "name": "webmavie"
+      }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="./style.css">
+      
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z08C7EYZGG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-Z08C7EYZGG');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1227311635205183"
+     crossorigin="anonymous"></script>
+</head>
+<body class="dark-mode">
+   <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="byshako00" data-description="Support me on Buy me a coffee!" data-message="Buy me a coffee" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+
+  <div class="page-wrapper">
+    <aside class="sidebar-ad sidebar-ad-left" style="display:none;">
+        <div class="ad-placeholder" id="adSlotLeftSidebar">
+            <div>
+                <p class="ad-label">Advertisement</p>
+                <p>(e.g., 160x600)</p>
+            </div>
+            <p>Your Ad Here</p>
+        </div>
+    </aside>
+
+    <div class="main-container-wrapper">
+      <div class="container">
+        <div class="marketing-tagline">
+            <span data-translate-key="taglineFree">
+                <svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L17.5,14.5L22,9.24L15.65,8.27L12,2.5L8.35,8.27L2,9.24L6.5,14.5L5.82,21L12,17.27Z" /></svg>
+                Free Online Tool
+            </span>
+            <span data-translate-key="taglineNoDownload">
+                <svg viewBox="0 0 24 24"><path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" /></svg>
+                No Download Required
+            </span>
+        </div>
+        <header class="app-header">
+          <div class="app-header-title"><img src="./images/logo.webp" alt="d3v.site logo" style="width:120px;"/></div>
+          <div class="app-header-controls">
+            <div class="language-dropdown" id="languageDropdownContainer">
+                <button id="languageToggleBtn" class="language-toggle-btn"><span id="currentLangDisplay">EN</span><svg class="dropdown-arrow" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button>
+                <div id="languageList" class="language-list"></div>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">
+                <svg class="sun-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="20" fill="black"/><line x1="50" y1="5" x2="50" y2="20" stroke="black" stroke-width="4"/><line x1="50" y1="80" x2="50" y2="95" stroke="black" stroke-width="4"/><line x1="5" y1="50" x2="20" y2="50" stroke="black" stroke-width="4"/><line x1="80" y1="50" x2="95" y2="50" stroke="black" stroke-width="4"/><line x1="20" y1="20" x2="30" y2="30" stroke="black" stroke-width="4"/><line x1="80" y1="80" x2="70" y2="70" stroke="black" stroke-width="4"/><line x1="80" y1="20" x2="70" y2="30" stroke="black" stroke-width="4"/><line x1="20" y1="80" x2="30" y2="70" stroke="black" stroke-width="4"/></svg>
+                <svg class="moon-icon" viewBox="0 0 24 24" style="display:none;"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22C16.19,22 19.85,19.13 20.78,15.35L20.65,15.3C16.89,16.5 13.03,14.75 11.5,11.25C10,7.75 11.58,4.1 14.86,2.78L15,2.71C14.1,2.25 13.08,2 12,2Z" /></svg>
+            </button>
+          </div>
+        </header>
+
+        <main class="main-content">
+            <h2 id="mainSubtitle">Advanced Online Color Picker</h2>
+            <div id="toolSection" class="tool-hidden">
+                <button class="picker-button" id="pickColorBtn">
+                  <svg viewBox="0 0 24 24"><path d="M17.25,2.83L19.17,4.75C19.37,4.95 19.37,5.26 19.17,5.46L18.46,6.17L15.83,3.54L16.54,2.83C16.74,2.63 17.05,2.63 17.25,2.83M2.92,16.04L13.03,5.93L15.83,3.54L13.73,1.44L2.92,12.25V15.05H5.72L15.03,5.74L16.44,4.33L13.73,1.63L12.33,3.03L3.92,11.44V12.25C3.92,12.58 3.79,12.92 3.54,13.17L2.12,14.59C1.63,15.08 1.44,15.75 1.63,16.33L2.28,18.7C2.47,19.29 2.96,19.72 3.54,19.87L5.91,20.53C6.5,20.72 7.12,20.53 7.63,20.04L9.04,18.62C9.29,18.38 9.62,18.25 9.94,18.25H10.75L17.58,11.42L14.78,8.62L2.92,16.04Z" /></svg>
+                  <span id="pickButtonText">Pick Color</span>
+                </button>
+                <div class="color-display-area">
+                  <div id="colorBox"></div>
+                  <div class="color-codes-wrapper">
+                    <div class="format-selector">
+                      <label for="colorFormatSelect" id="formatLabel">Format:</label>
+                      <select id="colorFormatSelect">
+                        <option value="hex" selected>HEX</option> <option value="rgb">RGB</option> <option value="hsl">HSL</option> <option value="cmyk">CMYK (Approx.)</option>
+                      </select>
+                    </div>
+                    <div id="colorCodeDisplay">
+                        <span id="colorCodeText">#161B22</span>
+                        <button id="copyBtn"><svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
+                    </div>
+                    <div id="copyFeedback"></div>
+                  </div>
+                </div>
+                <div class="ad-placeholder ad-banner-content-top" id="adSlotContentTop" style="display:none;">
+                    <p class="ad-label">Advertisement</p>
+                    <p>(e.g., 468x60 or Responsive)</p>
+                </div>
+                <div class="history-section">
+                  <h3 id="historyTitle">Color History</h3>
+                  <ul id="colorHistoryList"></ul>
+                </div>
+            </div>
+
+            <div id="unsupportedSection" class="tool-hidden">
+                <p class="unsupported-message" id="unsupportedMessage"></p>
+            </div>
+            
+            <article class="info-sections">
+                <section class="info-section" id="whatIsTool">
+                    <h3 data-translate-key="whatIsTitle">What is d3v.site?</h3>
+                    <p data-translate-key="whatIsP1"></p><p data-translate-key="whatIsP2"></p>
+                </section>
+                <section class="info-section" id="howToUseTool">
+                    <h3 data-translate-key="howToUseTitle">How to Use d3v.site</h3>
+                    <ol data-translate-key="howToUseList"></ol>
+                </section>
+                <section class="info-section" id="colorFormatsInfo">
+                    <h3 data-translate-key="colorFormatsTitle">About Color Formats</h3>
+                    <p data-translate-key="colorFormatsP1"></p>
+                    <ul data-translate-key="colorFormatsList"></ul>
+                </section>
+            </article>
+            <div class="ad-placeholder ad-banner-content-bottom" id="adSlotContentBottom" style="display:none;">
+                <p class="ad-label">Advertisement</p>
+                <p>(e.g., 728x90 or Responsive)</p>
+            </div>
+        </main>
+      </div>
+    </div>
+
+    <aside class="sidebar-ad sidebar-ad-right" style="display:none;">
+        <div class="ad-placeholder" id="adSlotRightSidebar">
+             <div>
+                <p class="ad-label">Advertisement</p>
+                <p>(e.g., 160x600)</p>
+            </div>
+            <p>Your Ad Here</p>
+        </div>
+    </aside>
+  </div>
+
+  <footer class="page-footer">
+    <p>© <span id="currentYear"></span> d3v.site. <span data-translate-key="footerAllRights">All rights reserved.</span></p>
+    <p>
+        <a href="https://d3v.site/privacy-policy" target="_blank" rel="noopener noreferrer" data-translate-key="footerPrivacyPolicy">Privacy Policy</a>
+    </p>
+    <p data-translate-key="footerCraftedBy">Crafted by <a href="https://webmavie.com" target="_blank" rel="noopener noreferrer">WebMaVie</a></p>
+  </footer>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>

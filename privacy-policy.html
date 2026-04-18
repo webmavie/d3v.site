@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Privacy Policy - d3v.site</title>
+  <link rel="icon" type="image/png" href="./images/favicon.png">
+  <meta name="description" content="Privacy Policy for d3v.site. Learn about what information is collected and how it is used.">
+  <meta name="robots" content="noindex, follow">
+  
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    :root {
+      --primary-color: #4a90e2; --primary-dark: #357ABD; --secondary-color: #f5f7fa;
+      --text-color: #333; --light-text-color: #fff; --border-color: #e0e6ed;
+      --shadow-color: rgba(0, 0, 0, 0.1); --success-color: #4CAF50; --danger-color: #c0392b;
+      --background-body: linear-gradient(135deg, #f3f5f7 0%, #ffffff 100%);
+      --background-container: var(--light-text-color); --input-bg: var(--light-text-color);
+      --history-swatch-border: var(--border-color);
+      --ad-placeholder-bg: #e9ecef; --ad-placeholder-border: #ced4da; --ad-placeholder-text: #6c757d;
+      --dropdown-bg: var(--light-text-color); --dropdown-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      --dropdown-item-hover-bg: #f0f3f7; --info-section-bg: #f9f9f9;
+      --main-content-max-width: 520px;
+      --sidebar-width: 200px;
+      --page-max-width: 1400px;
+      --gap-width: 20px;
+    }
+
+    body.dark-mode {
+      --primary-color: #58a6ff; --primary-dark: #388bfd; --secondary-color: #2c313a;
+      --text-color: #c9d1d9; --light-text-color: #0a0c10; --border-color: #373e47;
+      --shadow-color: rgba(0, 0, 0, 0.4); --success-color: #56d364; --danger-color: #f85149;
+      --background-body: #0d1117; --background-container: #161b22; --input-bg: #22272e;
+      --history-swatch-border: #444c56;
+      --ad-placeholder-bg: #21262d; --ad-placeholder-border: #30363d; --ad-placeholder-text: #768390;
+      --dropdown-bg: #22272e; --dropdown-shadow: 0 6px 18px rgba(0,0,0,0.3);
+      --dropdown-item-hover-bg: #2b313a; --info-section-bg: #1c2128;
+    }
+
+    html { 
+      scroll-behavior: smooth; 
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: var(--background-body);
+      color: var(--text-color);
+      padding: 0;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-size: 16px;
+      overflow-x: hidden;
+    }
+
+    .page-wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: var(--page-max-width);
+        margin: 0 auto;
+        padding: 20px var(--gap-width);
+    }
+    
+    .sidebar-ad {
+        width: var(--sidebar-width);
+        flex-shrink: 0;
+        display: none;
+    }
+    .sidebar-ad-left { margin-right: var(--gap-width); }
+    .sidebar-ad-right { margin-left: var(--gap-width); }
+
+    .sidebar-ad .ad-placeholder {
+        height: 600px;
+        position: sticky;
+        top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    .main-container-wrapper {
+        width: 100%;
+        max-width: 800px;
+        flex-grow: 1;
+    }
+
+    @media (min-width: 992px) {
+        .sidebar-ad-right { display: block; }
+    }
+    @media (min-width: 1200px) {
+        .sidebar-ad-left { display: block; }
+    }
+
+    .container {
+      background-color: var(--background-container);
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px var(--shadow-color);
+      text-align: center;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    .app-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid var(--border-color); }
+    .app-header-title h1 { font-size: 1.8em; color: var(--primary-color); margin: 0; font-weight: 600; }
+    .app-header-title h1 a { color: inherit; text-decoration: none; }
+    .app-header-controls { display: flex; align-items: center; gap: 10px; }
+    .theme-toggle-btn { background: none; border: 1px solid var(--border-color); color: var(--text-color); padding: 7px 10px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; gap: 5px; font-size: 0.85em; transition: background-color 0.2s, border-color 0.2s; }
+    .theme-toggle-btn:hover { background-color: var(--secondary-color); }
+    .theme-toggle-btn svg { width: 16px; height: 16px; fill: currentColor; }
+
+    .main-content {
+      text-align: left;
+    }
+    .main-content h2 {
+      color: var(--primary-color);
+      font-size: 1.6em;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .main-content h3 {
+      font-size: 1.2em;
+      color: var(--text-color);
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+    .main-content p, .main-content ul {
+      line-height: 1.65;
+      color: var(--text-color);
+      opacity: 0.9;
+    }
+    body.dark-mode .main-content p, body.dark-mode .main-content ul {
+      color: #b0b8c0;
+    }
+    .main-content ul {
+      padding-left: 25px;
+    }
+    .main-content a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+    .main-content a:hover {
+      text-decoration: underline;
+    }
+
+    .page-footer { width: 100%; text-align: center; padding: 25px 20px; margin-top: 30px; font-size: 0.9em; color: #666; border-top: 1px solid var(--border-color); background-color: var(--secondary-color); }
+    body.dark-mode .page-footer { color: #99a; background-color: #1e2228; }
+    .page-footer p { margin: 5px 0; }
+    .page-footer a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
+    .page-footer a:hover { text-decoration: underline; }
+  </style>
+  
+  <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z08C7EYZGG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-Z08C7EYZGG');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1227311635205183"
+     crossorigin="anonymous"></script>
+</head>
+<body class="dark-mode">
+
+  <div class="page-wrapper">
+    <div class="main-container-wrapper">
+      <div class="container">
+        <header class="app-header">
+          <div class="app-header-title"><a href="/"><img src="./images/logo.webp" alt="d3v.site logo" style="width:120px;"/></a></div>
+          <div class="app-header-controls">
+            <button id="themeToggleBtn" class="theme-toggle-btn" title="Toggle theme">
+                <svg class="sun-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="20" fill="black"/><line x1="50" y1="5" x2="50" y2="20" stroke="black" stroke-width="4"/><line x1="50" y1="80" x2="50" y2="95" stroke="black" stroke-width="4"/><line x1="5" y1="50" x2="20" y2="50" stroke="black" stroke-width="4"/><line x1="80" y1="50" x2="95" y2="50" stroke="black" stroke-width="4"/><line x1="20" y1="20" x2="30" y2="30" stroke="black" stroke-width="4"/><line x1="80" y1="80" x2="70" y2="70" stroke="black" stroke-width="4"/><line x1="80" y1="20" x2="70" y2="30" stroke="black" stroke-width="4"/><line x1="20" y1="80" x2="30" y2="70" stroke="black" stroke-width="4"/></svg>
+                <svg class="moon-icon" viewBox="0 0 24 24" style="display:none;"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22C16.19,22 19.85,19.13 20.78,15.35L20.65,15.3C16.89,16.5 13.03,14.75 11.5,11.25C10,7.75 11.58,4.1 14.86,2.78L15,2.71C14.1,2.25 13.08,2 12,2Z" /></svg>
+            </button>
+          </div>
+        </header>
+
+        <main class="main-content">
+            <h2>Privacy Policy for d3v.site</h2>
+            <p><em>Last updated: July 18, 2025</em></p>
+
+            <h3>Introduction</h3>
+            <p>Welcome to d3v.site. Your privacy is critically important to us. This Privacy Policy document outlines the types of information that is collected and recorded by d3v.site and how we use it. This policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in d3v.site.</p>
+            
+            <h3>Information We Collect</h3>
+            <p>d3v.site is designed to be a privacy-first tool. We do not collect any Personally Identifiable Information (PII) from our users.</p>
+            <ul>
+                <li><strong>No Personal Data:</strong> We do not ask for, collect, or store your name, email address, IP address, or any other personal information.</li>
+                <li><strong>Local Storage:</strong> To enhance your user experience, our website uses your browser's "Local Storage" to remember certain preferences. This data is stored exclusively on your own computer and is never transmitted to our servers. This includes:
+                    <ul>
+                        <li>Your picked color history.</li>
+                        <li>Your preferred theme (light or dark mode).</li>
+                        <li>Your selected language preference.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Cookies and Third-Party Advertisements</h3>
+            <p>d3v.site may display advertisements from third-party networks, such as Google AdSense. These third-party ad servers or ad networks use technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on d3v.site, which are sent directly to users' browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.</p>
+            <p>Note that d3v.site has no access to or control over these cookies that are used by third-party advertisers. We encourage you to consult the respective privacy policies of these third-party ad servers for more detailed information.</p>
+            
+            <h3>Links to Other Websites</h3>
+            <p>Our service may contain links to other websites that are not operated by us. If you click on a third party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit. We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
+
+            <h3>Changes to This Privacy Policy</h3>
+            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+
+            <h3>Contact Us</h3>
+            <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at: <a href="mailto:info@webmavie.com">info@webmavie.com</a>.</p>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-footer">
+    <p>© <span id="currentYear"></span> d3v.site. All rights reserved.</p>
+    <p>
+        <a href="/">Back to Tool</a>
+    </p>
+    <p>Crafted by <a href="https://webmavie.com" target="_blank" rel="noopener noreferrer">WebMaVie</a></p>
+  </footer>
+
+  <script>
+    let currentTheme = 'dark';
+    const el = {};
+
+    function cacheElements() {
+        el.body = document.body;
+        el.themeToggleBtn = document.getElementById('themeToggleBtn');
+        el.sunIcon = el.themeToggleBtn.querySelector('.sun-icon');
+        el.moonIcon = el.themeToggleBtn.querySelector('.moon-icon');
+        el.currentYear = document.getElementById('currentYear');
+    }
+    
+    function applyTheme(theme) {
+        currentTheme = theme;
+        localStorage.setItem('d3vsiteTheme', theme);
+        if (theme === 'dark') {
+            el.body.classList.add('dark-mode');
+            el.sunIcon.style.display = 'none';
+            el.moonIcon.style.display = 'block';
+        } else {
+            el.body.classList.remove('dark-mode');
+            el.sunIcon.style.display = 'block';
+            el.moonIcon.style.display = 'none';
+        }
+    }
+    
+    window.addEventListener('DOMContentLoaded', () => {
+        cacheElements();
+        
+        const savedTheme = localStorage.getItem('d3vsiteTheme') || 'dark';
+        applyTheme(savedTheme);
+
+        el.themeToggleBtn.addEventListener('click', () => {
+            applyTheme(currentTheme === 'light' ? 'dark' : 'light');
+        });
+        
+        el.currentYear.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
